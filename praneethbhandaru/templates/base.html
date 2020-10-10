@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Praneeth Bhandaru - {% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{{ DOMAIN }}{% static 'css/base.css' %}">
     {% block css %}
     {% endblock css %}
-    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{{ DOMAIN }}{% static 'js/base.js' %}"></script>
     {% block js %}
     {% endblock js %}
 </head>
 <body>
     <div id="navbar">
         <div class="img-cont">
-            <img id='pfp' src="{% static 'img/pfp.png' %}">
+            <img id='pfp' src="{{ DOMAIN }}{% static 'img/pfp.png' %}">
         </div>
         <div class="img-cont">
-            <img id="name-title" src="{% static 'img/name.png' %}">
+            <img id="name-title" src="{{ DOMAIN }}{% static 'img/name.png' %}">
         </div>
     </div>
     <div id="content">
