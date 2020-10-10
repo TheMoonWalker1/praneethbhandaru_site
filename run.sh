@@ -3,9 +3,12 @@
 # This assumes you've created a virtual environment and installed Gunicorn
 # See the docs for instructions
 
-source venv/bin/activate
-
+source app/bin/activate
+echo "PORT - " >> "things.txt"
+echo $PORT >> "things.txt"
+echo "HOST - " >> "things.txt"
+echo $HOST >> "things.txt"
 # Flask
-gunicorn app:app -b $HOST:$PORT -w 1
+#gunicorn app:app -b $HOST:$PORT -w 1
 # Django (replace <name> with the name of your application)
-# gunicorn <name>.wsgi -b $HOST:$PORT -w 1
+gunicorn praneethbhandaru.wsgi -b $HOST:$PORT -w 1
