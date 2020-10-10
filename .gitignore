@@ -2,7 +2,6 @@
 /venv/
 /app/
 /praneethbhandaru/db.sqlite3
-/praneethbhandaru/settings/secret.py
 /.idea/
 __pycache__/
-praneethbhandaru/static_media/
+praneethbhandaru/static/
