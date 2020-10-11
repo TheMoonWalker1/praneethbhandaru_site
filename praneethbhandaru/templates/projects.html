@@ -3,7 +3,7 @@
 
 {% block title %}Projects{% endblock title %}
 
-{% block css %}{% endblock css %}
+{% block css %}<link rel='stylesheet' href="{{ DOMAIN }}{% static 'css/projects.css' %}">{% endblock css %}
 
 {% block body %}
 <h2><b>
@@ -13,11 +13,29 @@
 {% if not projects %}
 <h5><b>Sorry, Praneeth Bhandaru has not made any of his projects available on this website yet. Please check again later.</b></h5>
 {% else %}
-{% for project in projects %}
-<h4>{{ project.title }}</h4>
-<p>Created On: <i>{{project.date}}</i></p>
-<p>{{project.description}}</p>
-<hr>
+
+
+<table class="projectTable">
+{% for sublist in projects %}
+<tr>
+    {% for project in sublist %}
+        <th>
+            <a href="{{project.link_to_project}}">
+                <div>
+                    <h3>{{ project.title }}</h3>
+                    <i>Created On: {{ project.date }}</i>
+                    <p> {{ project.description }} </p>
+                </div>
+            </a>
+        </th>
+    {% endfor %}
+</tr>
+
+<!--<h4>{{ project.title }}</h4>-->
+<!--<p>Created On: <i>{{project.date}}</i></p>-->
+<!--<p>{{project.description}}</p>-->
+<!--<hr>-->
 {% endfor %}
+</table>
 {% endif %}
 {% endblock body %}

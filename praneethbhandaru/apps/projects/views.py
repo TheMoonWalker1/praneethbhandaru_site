@@ -7,4 +7,10 @@ def projects_view(request):
         DOMAIN = '/2023pbhandar'
     else:
         DOMAIN = ''
-    return render(request, 'projects.html', {'DOMAIN' : DOMAIN, 'projects' : Project.objects.all().order_by('-date')})
+        
+    projects = list(Project.objects.all().order_by('-date'))
+    length = len(projects)
+    
+    projects2 = [projects[x:x+3] for x in range(0, length, 3)]
+    
+    return render(request, 'projects.html', {'DOMAIN' : DOMAIN, 'projects' : projects2})
