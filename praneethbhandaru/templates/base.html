@@ -15,7 +15,7 @@
 </head>
 <body>
     <nav id='navbar' class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}">
+        <a class="navbar-brand" href="{{ DOMAIN }}{% url 'home' %}">
             <img id='pfp' src="{{ DOMAIN }}{% static 'img/pfp.png' %}">
             <img id="name-title" src="{{ DOMAIN }}{% static 'img/name.png' %}">
         </a>
@@ -25,22 +25,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link option" href="{% url 'projects' %}">
+                    <a class="nav-link option" href="{{ DOMAIN }}{% url 'projects' %}">
                         Projects
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link option" href="{% url 'achievements' %}">
+                    <a class="nav-link option" href="{{ DOMAIN }}{% url 'achievements' %}">
                         Achievements
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link option" href="{% url 'contact' %}">
+                    <a class="nav-link option" href="{{ DOMAIN }}{% url 'contact' %}">
                         Contact
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link option" href="{% url 'about' %}">
+                    <a class="nav-link option" href="{{ DOMAIN }}{% url 'about' %}">
                         About
                     </a>
                 </li>
