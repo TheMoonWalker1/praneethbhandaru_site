@@ -1,6 +1,47 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock title %}
 
+{% block css %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock css %}
+
 {% block body %}
+<ul class="cb-slideshow">
+	<li>
+		<span style="background-image: url({% static 'img/slideshow/1.png' %});">Image 01</span>
+		<div>
+			<h3>Homecoming 2019</h3>
+		</div>
+	</li>
+	<li>
+        <span style="background-image: url({% static 'img/slideshow/2.png' %})">Image 02</span>
+		<div>
+			<h3>Pep Rallies</h3>
+		</div>
+    </li>
+	<li>
+        <span style="background-image: url({% static 'img/slideshow/3.png' %})">Image 03</span>
+		<div>
+			<h3>Winter MUN Mock</h3>
+		</div>
+    </li>
+	<li>
+        <span style="background-image: url({% static 'img/slideshow/4.png' %})">Image 03</span>
+		<div>
+			<h3>Culture Day</h3>
+		</div>
+    </li>
+	<li>
+        <span style="background-image: url({% static 'img/slideshow/5.png' %})">Image 03</span>
+		<div>
+			<h3>Pep Rallies</h3>
+		</div>
+    </li>
+	<li>
+        <span style="background-image: url({% static 'img/slideshow/6.png' %})">Image 03</span>
+		<div>
+			<h3>TJHSST</h3>
+		</div>
+    </li>
+</ul>
 {% endblock body %}

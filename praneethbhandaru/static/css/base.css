@@ -4,31 +4,21 @@
     font-family: 'Raleway', sans-serif;
 }
 
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgb(240, 240, 240);
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
 #navbar {
-    font-size: 25px;
-    background-color: rgb(0, 10, 87, .75);
-    padding: 10px;
-    position: fixed;
-    top:0;
-    width:100%;
-    transition: top 0.4s;
-    display: flex;
-}
-
-img-cont {
-    position: relative;
-    flex: 1;
-    height:100%;
-    vertical-align: center;
-}
-
-#pfp-cont {
-    margin-right: 10px;
+    background-color: rgb(0, 0, 20, .75) !important;
+    transition: top 1s;
+    z-index: 99 !important;
 }
 
 #pfp {
@@ -43,17 +33,21 @@ img-cont {
     filter: invert(100%);
 }
 
-.option-cont {
-    position: relative;
-    float: right;
-    border: 5px solid yellow;
+#content {
+    padding: 50px;
+    margin-top: 0px;
+    transition: margin-top 0.4s;
+    background-color: rgb(240, 240, 240);
+    min-height: 100%;
 }
 
 .option {
+    font-size: 20px !important;
+    margin-right: 20px !important;
+    transition: color 0.4s;
 }
 
-#content {
-    padding: 15px;
-    margin-top: 60px;
-    transition: margin-top 0.4s;
+.option:hover {
+    font-size: 20px !important;
+    color: gray !important;
 }

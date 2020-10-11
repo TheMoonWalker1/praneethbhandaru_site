@@ -17,9 +17,17 @@ from django.contrib import admin
 from django.urls import path
 
 from .apps.home import views as home_views
+from .apps.projects import views as projects_views
+from .apps.achievements import views as achievements_views
+from .apps.contact import views as contact_views
+from .apps.about import views as about_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.home_view, name='home'),
-    path('home', home_views.home_view, name='home')
+    path('home', home_views.home_view, name='home'),
+    path('about', about_views.about_view, name='about'),
+    path('achievements', achievements_views.achievements_view, name='achievements'),
+    path('projects', projects_views.projects_view, name='projects'),
+    path('contact', contact_views.contact_view, name='contact'),
 ]

@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'praneethbhandaru',
     'praneethbhandaru.apps.home',
+    'praneethbhandaru.apps.about',
+    'praneethbhandaru.apps.achievements',
+    'praneethbhandaru.apps.contact',
+    'praneethbhandaru.apps.projects',
 ]
 
 MIDDLEWARE = [
@@ -110,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
@@ -124,4 +128,4 @@ USE_TZ = True
 
 STATIC_URL = PREFIX + '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

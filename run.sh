@@ -1,14 +1,11 @@
 #!/bin/sh
 
-# This assumes you've created a virtual environment and installed Gunicorn
-# See the docs for instructions
-
 source app/bin/activate
-echo "PORT - " >> "things.txt"
-echo $PORT >> "things.txt"
-echo "HOST - " >> "things.txt"
-echo $HOST >> "things.txt"
-# Flask
-#gunicorn app:app -b $HOST:$PORT -w 1
-# Django (replace <name> with the name of your application)
+
+pip3 install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic
+echo "from django.contrib.auth.models import User; User.objects.create_superuser('themoonwalker_', 'praneethsbhandaru.com', 'admin')" | python manage.py shell
+
 gunicorn praneethbhandaru.wsgi -b $HOST:$PORT -w 1

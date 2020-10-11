@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+<h2><b>
+    Contact
+</b></h2>
+<hr/>
+{% if not contacts %}
+<h5><b>Sorry, Praneeth Bhandaru has not made any of his contact information available on this website yet. Please check again later.</b></h5>
+{% else %}
+{% for contact_info in contacts %}
+<h4>{{ contact_info.title }}</h4>
+{% if contact_info.title == "Email" %}
+<p>Contact me here: <a href="mailto:{{contact_info.link_to_contact}}">{{contact_info.link_to_contact}}</a></p>
+{% else %}
+<p>Contact me here: <a href="{{contact_info.link_to_contact}}">{{contact_info.link_to_contact}}</a></p>
+{% endif %}
+<p>{{contact_info.description}}</p>
+{% endfor %}
+{% endif %}
+{% endblock body %}

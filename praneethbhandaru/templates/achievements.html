@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Achievements{% endblock title %}
+
+{% block css %}{% endblock css %}
+
+
+{% block body %}
+<h2><b>
+    Achievements
+</b></h2>
+<hr/>
+{% if not achievements %}
+<h5><b>Sorry, Praneeth Bhandaru has not made any of his achievements available on this website yet. Please check again later.</b></h5>
+{% else %}
+{% for achievement in achievements %}
+<h4>{{ achievement.title }}</h4>
+<p>Created On: <i>{{achievement.date}}</i></p>
+<p>{{achievement.description}}</p>
+{% endfor %}
+{% endif %}
+{% endblock body %}
