@@ -1,3 +1,35 @@
-.projectTable {
+.projectTable tr td a div {
+    margin:30px;
+    padding:30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 5%;
+
+}
+.projectTable tr td a{
+    text-decoration: none;
     color:white;
+}
+.projectTable tr td {
+    margin: 30px;
+    padding: 30px;
+    position: relative;
+    max-width: 33.33%;
+}
+.projectTable tr td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+.projectTable tr {
+    width: 100%;
+}
+.projectTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }

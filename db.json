@@ -91,6 +91,84 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2020-10-11T20:34:53.136Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "This Website",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\", \"B\", \"A\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2020-10-11T20:36:01.513Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "This Website",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2020-10-11T20:38:05.826Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "This Website",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2020-10-11T20:38:10.254Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "This Website",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2020-10-11T20:38:13.672Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "This Website",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2020-10-11T20:53:31.846Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "My Personal Website",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\", \"R\", \"G\", \"B\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -604,39 +682,16 @@
 },
 {
   "model": "projects.project",
-  "pk": 1,
-  "fields": {
-    "title": "This Website",
-    "date": "2020-10-10",
-    "link_to_project": "https://user.tjhsst.edu/2023pbhandar",
-    "description": "I just made this website! Horray!"
-  }
-}, {
-  "model": "projects.project",
-  "pk": 2,
-  "fields": {
-    "title": "This Website",
-    "date": "2020-10-10",
-    "link_to_project": "https://user.tjhsst.edu/2023pbhandar",
-    "description": "I just made this website! Horray!"
-  }
-}, {
-  "model": "projects.project",
-  "pk": 3,
-  "fields": {
-    "title": "This Website",
-    "date": "2020-10-10",
-    "link_to_project": "https://user.tjhsst.edu/2023pbhandar",
-    "description": "I just made this website! Horray!"
-  }
-}, {
-  "model": "projects.project",
   "pk": 4,
   "fields": {
-    "title": "This Website",
+    "title": "My Personal Website",
     "date": "2020-10-10",
     "link_to_project": "https://user.tjhsst.edu/2023pbhandar",
-    "description": "I just made this website! Horray!"
+    "description": "This website is all about me. It contains my projects, my achievements, and my contact information, for anyone who would want to take a look at it. If you are seeing this description, it is most likely that you are already on this site!",
+    "r": "10",
+    "g": "10",
+    "b": "150",
+    "a": "0.5"
   }
 }
 ]

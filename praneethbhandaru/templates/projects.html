@@ -19,15 +19,16 @@
 {% for sublist in projects %}
 <tr>
     {% for project in sublist %}
-        <th>
-            <a href="{{project.link_to_project}}">
-                <div>
-                    <h3>{{ project.title }}</h3>
-                    <i>Created On: {{ project.date }}</i>
-                    <p> {{ project.description }} </p>
-                </div>
-            </a>
-        </th>
+    <td>
+        <a href="{{project.link_to_project}}">
+            <div style="background-image: linear-gradient(to bottom right, rgb({{project.r}},{{project.g}},{{project.b}}, {{project.a}}),rgb({{project.r}},{{project.g}},{{project.b}}));">
+                <h2><center>{{ project.title }}</center></h2>
+                <i><center>Created On: {{ project.date }}</center></i>
+                <br>
+                <p id="description"> {{ project.description }} </p>
+            </div>
+        </a>
+    </td>
     {% endfor %}
 </tr>
 
