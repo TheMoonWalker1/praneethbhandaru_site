@@ -20,14 +20,16 @@
 <tr>
     {% for project in sublist %}
     <td>
-        <a href="{{project.link_to_project}}">
+        {% if project.title %}
+        <a href="{% if project.link_to_project %}{{project.link_to_project}}{% else %}#{% endif %}">
             <div style="background-image: linear-gradient(to bottom right, rgb({{project.r}},{{project.g}},{{project.b}}, {{project.a}}),rgb({{project.r}},{{project.g}},{{project.b}}));">
-                <h2><center>{{ project.title }}</center></h2>
+                <h3><center>{{ project.title }}</center></h3>
                 <i><center>Created On: {{ project.date }}</center></i>
                 <br>
                 <p id="description"> {{ project.description }} </p>
             </div>
         </a>
+        {% endif %}
     </td>
     {% endfor %}
 </tr>
