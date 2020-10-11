@@ -3,6 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A Personal Website About Praneeth Chinmay Bhandaru">
+    <meta name="keywords" content="Praneeth, Chinmay, Bhandaru, About Me, Personal Website">
+    <meta name="author" content="Praneeth Bhandaru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praneeth Bhandaru - {% block title %}{% endblock title %}</title>
     <link rel="icon" href="{{ DOMAIN }}{% static 'img/favico.ico' %}">
     <link rel="stylesheet" href="{{ DOMAIN }}{% static 'css/base.css' %}">
@@ -10,19 +14,24 @@
     {% block css %}
     {% endblock css %}
     <script src="{{ DOMAIN }}{% static 'js/base.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     {% block js %}
     {% endblock js %}
 </head>
 <body>
     <nav id='navbar' class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="{{ DOMAIN }}{% url 'home' %}">
-            <img id='pfp' src="{{ DOMAIN }}{% static 'img/pfp.png' %}">
-            <img id="name-title" src="{{ DOMAIN }}{% static 'img/name.png' %}">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" href="{{ DOMAIN }}{% url 'home' %}" style="display: inline-block;">
+            {% if not request.user_agent.is_mobile %}
+            <img id='pfp' src="{{ DOMAIN }}{% static 'img/pfp.png' %}">
+            {% endif %}
+            <img id="name-title" src="{{ DOMAIN }}{% static 'img/name.png' %}">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link option" href="{{ DOMAIN }}{% url 'projects' %}">

@@ -23,7 +23,7 @@ from .apps.contact import views as contact_views
 from .apps.about import views as about_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('', home_views.home_view, name='home'),
     path('home', home_views.home_view, name='home'),
     path('about', about_views.about_view, name='about'),
