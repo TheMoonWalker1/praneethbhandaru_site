@@ -9,39 +9,28 @@
 <ul class="cb-slideshow">
 	<li>
 		<span style="background-image: url({{ DOMAIN }}{% static 'img/slideshow/1.png' %});"></span>
+        {% if not request.user_agent.is_mobile %}
 		<div>
-			<h3></h3>
+			<h3>
+				Praneeth Bhandaru
+			</h3>
 		</div>
+		{% endif %}
 	</li>
 	<li>
         <span style="background-image: url({{ DOMAIN }}{% static 'img/slideshow/2.png' %})"></span>
-		<div>
-			<h3></h3>
-		</div>
     </li>
 	<li>
         <span style="background-image: url({{ DOMAIN }}{% static 'img/slideshow/3.png' %})"></span>
-		<div>
-			<h3></h3>
-		</div>
     </li>
 	<li>
         <span style="background-image: url({{ DOMAIN }}{% static 'img/slideshow/4.png' %})"></span>
-		<div>
-			<h3></h3>
-		</div>
     </li>
 	<li>
         <span style="background-image: url({{ DOMAIN }}{% static 'img/slideshow/5.png' %})"></span>
-		<div>
-			<h3></h3>
-		</div>
     </li>
 	<li>
         <span style="background-image: url({{ DOMAIN }}{% static 'img/slideshow/6.png' %})"></span>
-		<div>
-			<h3></h3>
-		</div>
     </li>
 </ul>
 {% endblock body %}

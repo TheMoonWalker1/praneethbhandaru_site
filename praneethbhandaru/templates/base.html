@@ -22,17 +22,20 @@
 </head>
 <body>
     <nav id='navbar' class="navbar navbar-expand-md navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" style="display: inlineblock;">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{{ DOMAIN }}{% url 'home' %}" style="display: inline-block;">
-            {% if not request.user_agent.is_mobile %}
-            <img id='pfp' src="{{ DOMAIN }}{% static 'img/pfp.png' %}">
-            {% endif %}
-            <img id="name-title" src="{{ DOMAIN }}{% static 'img/name.png' %}">
-        </a>
+        {% if not request.user_agent.is_mobile %}
+        <img id='pfp' src="{{ DOMAIN }}{% static 'img/pfp.png' %}">
+        {% endif %}
+        <img id="name-title" src="{{ DOMAIN }}{% static 'img/name.png' %}">
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link option" href="{{ DOMAIN }}{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link option" href="{{ DOMAIN }}{% url 'projects' %}">
                         Projects
