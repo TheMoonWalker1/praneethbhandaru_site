@@ -1,0 +1,53 @@
+.projectTable tr td a div {
+    margin:30px;
+    padding:30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 5%;
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+    transition: all 0.5s;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    box-shadow: 10px 15px rgb(0, 0, 0, .5);
+}
+.projectTable tr td a div::-webkit-scrollbar{
+    display: none;
+}
+.projectTable tr td a div:hover {
+    filter: brightness(150%);
+    top: 10px;
+    bottom: 10px;
+    left:10px;
+    right: 10px;
+    border-radius: 15%;
+    border: 1.5px solid black;
+    box-shadow: 5px 10px gray;
+}
+.projectTable tr td a{
+    text-decoration: none;
+    color:white;
+}
+.projectTable tr td {
+    margin: 30px;
+    padding: 30px;
+    position: relative;
+    max-width: 33.33%;
+}
+.projectTable tr td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+.projectTable tr {
+    width: 100%;
+}
+.projectTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

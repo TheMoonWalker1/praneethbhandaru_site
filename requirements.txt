@@ -1,1 +1,5 @@
 django
+whitenoise
+gunicorn
+user-agents
+django-user-agents
